@@ -1,0 +1,37 @@
+[celbridge]
+celbridge-version = "1.5.0"
+project-version = "0.1.0"
+
+# 'hide' keeps resources out of the Explorer tree. 'search-exclude' also keeps them out of search.
+# Both take glob patterns, e.g. "Python/.venv/**".
+[celbridge.resources]
+hide = [".gitignore", ".DS_Store", "Thumbs.db", "desktop.ini", "deno.lock", "test_coverage_output/raw"]
+search-exclude = ["node_modules"]
+
+[[shortcut]]
+resource = "terminal.console"
+icon = "bs-terminal"
+area = "bottom"
+open-on-load = true
+
+[[shortcut]]
+resource = "README.md"
+icon = "bs-book"
+area = "side"
+open-on-load = true
+
+[[shortcut]]
+resource = "README_TypeScript_correctness.md"
+icon = "bs-book"
+area = "side"
+open-on-load = true
+
+[[shortcut]]
+resource = "test_output/index.html"
+icon = "bs-clipboard-check"
+area = "side"
+
+[[shortcut]]
+resource = "test_coverage_output/index.html"
+icon = "bs-bar-chart"
+area = "side"

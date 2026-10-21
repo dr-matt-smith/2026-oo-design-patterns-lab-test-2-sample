@@ -1,0 +1,4 @@
+.DS_Store
+.celbridge/
+test_output/
+test_coverage_output/

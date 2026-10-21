@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1340" viewBox="0 0 1300 1340"
+     font-family="Helvetica, Arial, sans-serif" fill="none" stroke="#000" stroke-width="2">
+
+  <!-- white background so the diagram is readable in dark mode -->
+  <rect x="0" y="0" width="1300" height="1340" fill="#fff" stroke="none"/>
+
+  <defs>
+    <!-- open arrowhead for dependency arrows -->
+    <marker id="open-arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="20" markerHeight="20"
+            markerUnits="userSpaceOnUse" orient="auto">
+      <polyline points="2,2 18,10 2,18" fill="none" stroke="#000" stroke-width="2"/>
+    </marker>
+    <!-- hollow triangle for realization (implements) arrows -->
+    <marker id="hollow-triangle" viewBox="0 0 36 32" refX="34" refY="16" markerWidth="36" markerHeight="32"
+            markerUnits="userSpaceOnUse" orient="auto">
+      <polygon points="2,2 34,16 2,30" fill="#fff" stroke="#000" stroke-width="2" stroke-dasharray="none"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Diagram frame with heading tab ===== -->
+  <g id="frame">
+    <rect x="10" y="10" width="1280" height="1320"/>
+    <polygon points="10,10 340,10 340,52 318,74 10,74" fill="#fff"/>
+    <text x="26" y="54" font-size="28" fill="#000" stroke="none">cd/od: <tspan font-weight="bold">Question 3</tspan></text>
+  </g>
+
+  <!-- ===== SelfDrivingType (enumeration) ===== -->
+  <g id="SelfDrivingType">
+    <rect x="40" y="110" width="660" height="270" fill="#fff"/>
+    <line x1="40" y1="220" x2="700" y2="220"/>
+    <text x="370" y="152" text-anchor="middle" font-size="24" fill="#000" stroke="none">«enumeration»</text>
+    <text x="370" y="200" text-anchor="middle" font-size="36" font-weight="bold" fill="#000" stroke="none">+SelfDrivingType</text>
+    <g font-size="24" fill="#000" stroke="none">
+      <text x="52" y="265">CRUISE_CONTROL = "CRUISE_CONTROL"</text>
+      <text x="52" y="305">ADAPTIVE_CRUISE = "ADAPTIVE_CRUISE"</text>
+      <text x="52" y="345">AUTONOMOUS_DRIVING = "AUTONOMOUS_DRIVING"</text>
+    </g>
+  </g>
+
+  <!-- ===== main.ts (artifact = a source file, not a class) ===== -->
+  <g id="main.ts">
+    <rect x="820" y="100" width="340" height="110" fill="#d4f7c5"/>
+    <!-- artifact "document" icon, top right -->
+    <path d="M1125,112 h14 l8,8 v22 h-22 z M1139,112 v8 h8" fill="#fff" stroke-width="1.5"/>
+    <text x="990" y="145" text-anchor="middle" font-size="24" fill="#000" stroke="none">«artifact»</text>
+    <text x="990" y="186" text-anchor="middle" font-size="32" font-weight="bold" fill="#000" stroke="none">main.ts</text>
+  </g>
+
+  <!-- ===== audiA8 : Car ===== -->
+  <g id="audiA8">
+    <rect x="720" y="290" width="540" height="215" fill="#ccf6ff"/>
+    <line x1="720" y1="355" x2="1260" y2="355"/>
+    <text x="990" y="334" text-anchor="middle" font-size="32" font-weight="bold" text-decoration="underline" fill="#000" stroke="none">audiA8 : Car</text>
+    <g font-size="28" fill="#000" stroke="none">
+      <text x="732" y="400">priceThousands = 100</text>
+      <text x="732" y="441">selfDrivingLevel = ADAPTIVE_CRUISE</text>
+      <text x="732" y="482">electricRange = 100</text>
+    </g>
+  </g>
+
+  <!-- ===== «create» dependency: main.ts -> audiA8 ===== -->
+  <line x1="990" y1="210" x2="990" y2="290" stroke-dasharray="10,7" marker-end="url(#open-arrow)"/>
+  <text x="1005" y="258" font-size="22" fill="#000" stroke="none">«create»</text>
+
+  <!-- ===== Car ===== -->
+  <g id="Car">
+    <rect x="200" y="580" width="900" height="370" fill="#fff"/>
+    <line x1="200" y1="650" x2="1100" y2="650"/>
+    <line x1="200" y1="800" x2="1100" y2="800"/>
+    <text x="650" y="628" text-anchor="middle" font-size="36" font-weight="bold" fill="#000" stroke="none">+Car</text>
+    <g font-size="28" fill="#000" stroke="none">
+      <text x="212" y="695">+priceThousands: double</text>
+      <text x="212" y="736">+selfDrivingLevel: SelfDrivingType = CRUISE_CONTROL</text>
+      <text x="212" y="777">-electricRange: double</text>
+      <!-- operations: the constructor, and the methods the two interfaces require -->
+      <text x="212" y="845">«constructor» +Car(electricRange: double)</text>
+      <text x="212" y="886">+getSelfDrivingLevel(): SelfDrivingType</text>
+      <text x="212" y="927">+getElectricRange(): double</text>
+    </g>
+  </g>
+
+  <!-- ===== Intelligence (interface) ===== -->
+  <g id="Intelligence">
+    <rect x="60" y="1080" width="560" height="210" fill="#fff"/>
+    <line x1="60" y1="1180" x2="620" y2="1180"/>
+    <line x1="60" y1="1215" x2="620" y2="1215"/>
+    <text x="340" y="1120" text-anchor="middle" font-size="24" fill="#000" stroke="none">«interface»</text>
+    <text x="340" y="1162" text-anchor="middle" font-size="36" font-weight="bold" fill="#000" stroke="none">+Intelligence</text>
+    <text x="72" y="1262" font-size="28" fill="#000" stroke="none">+getSelfDrivingLevel(): SelfDrivingType</text>
+  </g>
+
+  <!-- ===== ElectricHybrid (interface) ===== -->
+  <g id="ElectricHybrid">
+    <rect x="680" y="1080" width="560" height="210" fill="#fff"/>
+    <line x1="680" y1="1180" x2="1240" y2="1180"/>
+    <line x1="680" y1="1215" x2="1240" y2="1215"/>
+    <text x="960" y="1120" text-anchor="middle" font-size="24" fill="#000" stroke="none">«interface»</text>
+    <text x="960" y="1162" text-anchor="middle" font-size="36" font-weight="bold" fill="#000" stroke="none">+ElectricHybrid</text>
+    <text x="692" y="1262" font-size="28" fill="#000" stroke="none">+getElectricRange(): double</text>
+  </g>
+
+  <!-- ===== Realization: Car implements Intelligence and ElectricHybrid ===== -->
+  <g id="implements" stroke-dasharray="10,7">
+    <line x1="450" y1="950" x2="340" y2="1080" marker-end="url(#hollow-triangle)"/>
+    <line x1="850" y1="950" x2="960" y2="1080" marker-end="url(#hollow-triangle)"/>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+[session]
+type = "shell"
+
+[session.shell]
+script = "deno task"
+
+[[session.shortcut]]
+label = "run src/main.ts"
+icon = "bs-play-btn"
+text = "deno task run"
+
+[[session.shortcut]]
+label = "(1) type check src/ and tests/"
+icon = "bs-1-circle"
+text = "deno task check"
+
+[[session.shortcut]]
+label = "(2) check the formatting of src/ (changes nothing)"
+icon = "bs-2-circle"
+text = "deno task fmtcheck"
+
+[[session.shortcut]]
+label = "(3) fix the formatting of src/"
+icon = "bs-3-circle"
+text = "deno task fixsrc"
+
+[[session.shortcut]]
+label = "(4) lint: look for likely mistakes and bad habits in src/ and tests/ (fix these by hand)"
+icon = "bs-4-circle"
+text = "deno task lint"

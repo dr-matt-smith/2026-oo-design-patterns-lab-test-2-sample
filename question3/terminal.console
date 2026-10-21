@@ -1,0 +1,52 @@
+[session]
+type = "shell"
+
+[session.shell]
+script = "deno task"
+
+[[session.shortcut]]
+label = "run src/main.ts"
+icon = "bs-play-btn"
+text = "deno task run"
+
+# Buttons 1-7 are the checks in README_TypeScript_correctness.md, in the same order and with the same numbers.
+
+[[session.shortcut]]
+label = "(1) type check src/"
+icon = "bs-1-circle"
+text = "deno task check"
+
+[[session.shortcut]]
+label = "(2) check the formatting of src/ (changes nothing)"
+icon = "bs-2-circle"
+text = "deno task fmtcheck"
+
+[[session.shortcut]]
+label = "(3) fix the formatting of src/"
+icon = "bs-3-circle"
+text = "deno task fixsrc"
+
+[[session.shortcut]]
+label = "(4) lint: look for likely mistakes and bad habits in src/ (fix these by hand)"
+icon = "bs-4-circle"
+text = "deno task lint"
+
+[[session.shortcut]]
+label = "(5) check the documentation comments (Question 4)"
+icon = "bs-5-circle"
+text = "deno task doclint"
+
+[[session.shortcut]]
+label = "(6) run the tests, and write the report to test_output/index.html"
+icon = "bs-6-circle"
+text = "deno task test"
+
+[[session.shortcut]]
+label = "(7) test coverage: must be 100% - report in test_coverage_output/index.html"
+icon = "bs-7-circle"
+text = "deno task coverage"
+
+[[session.shortcut]]
+label = "generate API documentation into docs/ (Question 4)"
+icon = "bs-journal-text"
+text = "deno task doc"

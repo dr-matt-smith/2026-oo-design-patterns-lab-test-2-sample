@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1460" viewBox="0 0 1300 1460"
+     font-family="Helvetica, Arial, sans-serif" fill="none" stroke="#000" stroke-width="2">
+
+  <!-- white background so the diagram is readable in dark mode -->
+  <rect x="0" y="0" width="1300" height="1460" fill="#fff" stroke="none"/>
+
+  <!-- open arrowhead for dependency arrows -->
+  <defs>
+    <marker id="open-arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="20" markerHeight="20"
+            markerUnits="userSpaceOnUse" orient="auto">
+      <polyline points="2,2 18,10 2,18" fill="none" stroke="#000" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Diagram frame with heading tab ===== -->
+  <g id="frame">
+    <rect x="10" y="10" width="1280" height="1440"/>
+    <polygon points="10,10 340,10 340,52 318,74 10,74" fill="#fff"/>
+    <text x="26" y="54" font-size="28" fill="#000" stroke="none">cd/od: <tspan font-weight="bold">Question 2</tspan></text>
+  </g>
+
+  <!-- ================= package: devices (folder src/devices/) ================= -->
+  <g id="devices">
+    <!-- package tab, then body -->
+    <rect x="60" y="110" width="300" height="95" fill="#fff59d"/>
+    <rect x="60" y="205" width="680" height="565" fill="#fff59d"/>
+    <text x="80" y="176" font-size="48" fill="#000" stroke="none">devices</text>
+
+    <!-- ===== appleMagic : Mouse ===== -->
+    <g id="appleMagic">
+      <rect x="130" y="245" width="520" height="185" fill="#ccf6ff"/>
+      <line x1="130" y1="310" x2="650" y2="310"/>
+      <text x="390" y="289" text-anchor="middle" font-size="32" font-weight="bold" text-decoration="underline" fill="#000" stroke="none">appleMagic : Mouse</text>
+      <g font-size="28" fill="#000" stroke="none">
+        <text x="142" y="360">laser = true</text>
+        <text x="142" y="401">weightKilos = 0.1</text>
+      </g>
+    </g>
+
+    <!-- ===== Mouse (devices) ===== -->
+    <g id="devices.Mouse">
+      <rect x="100" y="490" width="560" height="240" fill="#fff"/>
+      <line x1="100" y1="580" x2="660" y2="580"/>
+      <text x="380" y="545" text-anchor="middle" font-size="36" font-weight="bold" fill="#000" stroke="none">+Mouse</text>
+      <g font-size="28" fill="#000" stroke="none">
+        <text x="112" y="640">+laser: boolean</text>
+        <text x="112" y="681">+weightKilos: double</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= package: rodents (folder src/rodents/) ================= -->
+  <g id="rodents">
+    <!-- package tab, then body -->
+    <rect x="160" y="870" width="280" height="85" fill="#f3c4f3"/>
+    <rect x="160" y="955" width="620" height="440" fill="#f3c4f3"/>
+    <text x="180" y="930" font-size="48" fill="#000" stroke="none">rodents</text>
+
+    <!-- ===== dormouse : Mouse ===== -->
+    <g id="dormouse">
+      <rect x="230" y="995" width="440" height="135" fill="#ccf6ff"/>
+      <line x1="230" y1="1060" x2="670" y2="1060"/>
+      <text x="450" y="1039" text-anchor="middle" font-size="32" font-weight="bold" text-decoration="underline" fill="#000" stroke="none">dormouse : Mouse</text>
+      <text x="242" y="1108" font-size="28" fill="#000" stroke="none">weightGrams = 30</text>
+    </g>
+
+    <!-- ===== Mouse (rodents) ===== -->
+    <g id="rodents.Mouse">
+      <rect x="210" y="1175" width="520" height="180" fill="#fff"/>
+      <line x1="210" y1="1265" x2="730" y2="1265"/>
+      <text x="470" y="1235" text-anchor="middle" font-size="36" font-weight="bold" fill="#000" stroke="none">+Mouse</text>
+      <text x="222" y="1323" font-size="28" fill="#000" stroke="none">«get/set» -weightGrams: int</text>
+    </g>
+  </g>
+
+  <!-- ===== main.ts (artifact = a source file, not a class) ===== -->
+  <g id="main.ts">
+    <rect x="880" y="700" width="340" height="110" fill="#d4f7c5"/>
+    <!-- artifact "document" icon, top right -->
+    <path d="M1185,712 h14 l8,8 v22 h-22 z M1199,712 v8 h8" fill="#fff" stroke-width="1.5"/>
+    <text x="1050" y="745" text-anchor="middle" font-size="24" fill="#000" stroke="none">«artifact»</text>
+    <text x="1050" y="786" text-anchor="middle" font-size="32" font-weight="bold" fill="#000" stroke="none">main.ts</text>
+  </g>
+
+  <!-- ===== «create» dependencies: main.ts -> objects ===== -->
+  <g id="creates" stroke-dasharray="10,7">
+    <line x1="920" y1="700" x2="652" y2="420" marker-end="url(#open-arrow)"/>
+    <line x1="960" y1="810" x2="580" y2="995" marker-end="url(#open-arrow)"/>
+  </g>
+  <g font-size="22" fill="#000" stroke="none">
+    <text x="800" y="545">«create»</text>
+    <text x="790" y="930">«create»</text>
+  </g>
+</svg>
