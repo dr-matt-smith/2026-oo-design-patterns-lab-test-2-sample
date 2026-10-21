@@ -2,3 +2,4 @@
 .celbridge/
 test_output/
 test_coverage_output/
+.idea/
