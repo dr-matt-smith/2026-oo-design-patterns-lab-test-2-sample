@@ -1,0 +1,15 @@
+[session]
+type = "shell"
+
+[session.shell]
+script = "deno task"
+
+[[session.shortcut]]
+label = "(1) type check src/"
+icon = "bs-1-circle"
+text = "deno task check"
+
+[[session.shortcut]]
+label = "(2) run the tests, and write the report to test_output/index.html"
+icon = "bs-2-circle"
+text = "deno task test"
