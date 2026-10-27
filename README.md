@@ -15,10 +15,14 @@ see each question's `README.md` for its task, and `README_TypeScript_correctness
 
 ## Video suggested solutions (with closed captions)
 
-Question 1:
-- https://screenpal.com/watch/cO6to9nykkQ
-
-(others to follow soon)
+video screencasts
+- Question 1:
+  - https://screenpal.com/watch/cO6to9nykkQ
+- Question 2:
+  - https://screenpal.com/watch/cO6tDtnykGL
+- Question 3:
+- Question 4:
+  - (others to follow soon)
 
 ## Getting started
 
