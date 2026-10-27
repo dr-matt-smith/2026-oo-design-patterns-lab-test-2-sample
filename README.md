@@ -23,7 +23,7 @@ video screencasts
 - Question 3:
   - https://screenpal.com/watch/cO6tbCnykRb
 - Question 4:
-  - (others to follow soon)
+  - https://screenpal.com/watch/cO6tFEnypjg
 
 ## Getting started
 
