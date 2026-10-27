@@ -13,6 +13,13 @@ see each question's `README.md` for its task, and `README_TypeScript_correctness
 | `question3/` | Interfaces: `Car` implementing `Intelligence` and `ElectricHybrid`, plus tests       |
 | `SOLUTIONS/` | Worked solutions to all three questions - try the questions yourself first!          |
 
+## Video suggested solutions (with closed captions)
+
+Question 1:
+- https://screenpal.com/watch/cO6to9nykkQ
+
+(others to follow soon)
+
 ## Getting started
 
 You need [Deno](https://deno.com/) installed. Then, inside a question folder:
