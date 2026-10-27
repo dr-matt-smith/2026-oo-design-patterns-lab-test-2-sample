@@ -21,6 +21,7 @@ video screencasts
 - Question 2:
   - https://screenpal.com/watch/cO6tDtnykGL
 - Question 3:
+  - https://screenpal.com/watch/cO6tbCnykRb
 - Question 4:
   - (others to follow soon)
 
